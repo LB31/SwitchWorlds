@@ -1,0 +1,6 @@
+- schwarze Männchen einfügen
+	- diese verfolgen den Spieler
+	- wenn der Spieler die Welt dreht, gehen diese zu ihrer Ursprungsposition zurück
+- Slider UI
+	- ändert sich je nach Welt mit der Zeit
+	- regeneriert sich beim Weltwechsel nach Zeit
