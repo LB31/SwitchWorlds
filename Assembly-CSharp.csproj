@@ -115,6 +115,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\BubbleController.cs" />
+    <Compile Include="Assets\Scripts\DialogManager.cs" />
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GrayscaleFilter.cs" />
     <Compile Include="Assets\Scripts\GyroController.cs" />
@@ -122,7 +123,16 @@
     <Compile Include="Assets\Scripts\PlayerInteractor.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonUserControl.cs" />
     <Compile Include="Assets\Scripts\WorldManager.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Abstract\IGenerator.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Abstract\IMap.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Generators\GrassGenerator.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Generators\HeightsGenerator.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Generators\TexturesGenerator.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Generators\TreeGenerator.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Maps\FalloffMap.cs" />
+    <Compile Include="Assets\TerrainGenerator\Scripts\Maps\PerlinMap.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\Terrain Blending Starter Kit\Assets\Shaders\TerrainSplatmapCommonBlend.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
@@ -140,6 +150,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\laxer Assets\Terrain Shader\Shaders\custom terrain Bump fade addpass.shader" />
     <None Include="Assets\Shaders\GSF.shader" />
+    <None Include="Assets\Terrain Blending Starter Kit\Assets\Shaders\PBR_IntersectionMask.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
@@ -170,6 +181,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
+    <None Include="Assets\Terrain Blending Starter Kit\Assets\Shaders\Standard-FirstPass Blend.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\laxer Assets\Terrain Shader\Shaders\HeightBlendSpecularx4.shader" />

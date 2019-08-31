@@ -4,9 +4,11 @@ ScriptsOnlyBuild:
     - UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter
     Assembly-CSharp.dll:
     - BubbleController
+    - DialogManager
     - EnemyController
     - GyroController
     - HealthManager
+    - PlayerInteractor
     - ThirdPersonUserControl
     - UnityEngine.PostProcessing.PostProcessingBehaviour
     - UnityEngine.PostProcessing.PostProcessingProfile
@@ -55,8 +57,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -124,50 +128,56 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 10140}
+      Script: {instanceID: 10146}
     - Class: 114
-      Script: {instanceID: 10234}
+      Script: {instanceID: 10240}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 10278}
     - Class: 114
-      Script: {instanceID: 10626}
+      Script: {instanceID: 10352}
     - Class: 114
-      Script: {instanceID: 10654}
+      Script: {instanceID: 10644}
     - Class: 114
-      Script: {instanceID: 10692}
+      Script: {instanceID: 10672}
     - Class: 114
-      Script: {instanceID: 10806}
+      Script: {instanceID: 10710}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 10828}
     - Class: 114
-      Script: {instanceID: 11206}
+      Script: {instanceID: 11218}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11500}
+      Script: {instanceID: 11240}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11524}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11608}
     - Class: 114
-      Script: {instanceID: 12048}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 12326}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 12328}
+      Script: {instanceID: 12098}
     - Class: 114
-      Script: {instanceID: 12368}
+      Script: {instanceID: 12266}
     - Class: 114
-      Script: {instanceID: 66594}
+      Script: {instanceID: 12384}
     - Class: 114
-      Script: {instanceID: 81146}
+      Script: {instanceID: 12386}
+    - Class: 114
+      Script: {instanceID: 12428}
+    - Class: 114
+      Script: {instanceID: 47586}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -179,9 +189,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 193
+      Script: {instanceID: 0}
     - Class: 195
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -192,6 +206,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 226
+      Script: {instanceID: 0}
+    - Class: 227
+      Script: {instanceID: 0}
+    - Class: 228
       Script: {instanceID: 0}
     - Class: 238
       Script: {instanceID: 0}
@@ -434,6 +454,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: TimedObjectActivator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GyroController
   - hash:
       serializedVersion: 2
       Hash: 9e27f44bbf48228f203a37254d40f8ae
@@ -772,6 +798,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 3e75fa8c1019040a9a211c6d236703c0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BubbleController
+  - hash:
+      serializedVersion: 2
       Hash: 21ee95b4add1eb6d3d25a1efaa2d13d9
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Vehicles.Car
@@ -914,6 +946,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DynamicJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerInteractor
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1210,16 +1248,34 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 3e75fa8c1019040a9a211c6d236703c0
+      Hash: 09f26ba0b81da148de87e54bb72d9cb0
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BubbleController
+    namespaceName: Assets.Scripts.MapGenerator.Generators
+    className: TreeGenerator
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.Scripts.MapGenerator.Generators
+    className: TexturesGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: c997434b3aaadca884e011b515d179a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.Scripts.MapGenerator.Generators
+    className: HeightsGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 507c6add8f57e22722a6b5e0c64bbd5f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Assets.Scripts.MapGenerator.Generators
+    className: GrassGenerator
+  - hash:
+      serializedVersion: 2
+      Hash: 21a00089e13f77ce7c9ddb7a709a4647
+    assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GyroController
+    className: DialogManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
